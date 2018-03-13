@@ -268,13 +268,18 @@
     bottom: 0;
     width: 100%;
     height: 1rem;
-    line-height: 1rem;
     background: #fff; }
     .page-user .tab-bar .tab-item {
       float: left;
       width: 25%;
       text-align: center;
-      color: #999; }
+      color: #999;
+      padding-top: .1rem; }
+      .page-user .tab-bar .tab-item i {
+        display: inline-block;
+        width: 100%;
+        height: .3rem;
+        line-height: .3rem; }
     .page-user .tab-bar .active {
       color: #b5beff; }
 
