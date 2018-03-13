@@ -1,0 +1,348 @@
+// login page
+
+.page-login,.page-register{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: url('../images/login-bg.png') 100% 100%;
+
+    .avatar-wrapper{
+        height: 2.6rem;
+        padding-top: .8rem;
+        text-align: center;
+        .inner-wrapper{
+            width: 1.6rem;
+            height: 100%;
+            margin: 0 auto;
+            .avatar-holder{
+                position: relative;
+                width: 1.6rem;
+                height: 1.6rem;
+                margin: 0 auto;
+                border-radius: 50px;
+                &::before{
+                    position: absolute;
+                    font-size: .4rem;
+                    bottom: -.1rem;
+                    right: -.1rem;
+                    color: #b5beff;
+                }
+                img{
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    border-radius: 50px;
+                }
+            }
+            input{
+                visibility: hidden;
+                height: 1px;
+                width: 1px;
+            }
+        }
+    }
+    .logo-wrapper{
+        width: 100%;
+        height: 4.1rem;
+        padding-top: 1.8rem;
+        img{
+            width: 2rem;
+            height: 2rem;
+            margin: 0 auto;
+        }
+    }
+    .register-feild {
+        margin-top: 2.2rem;
+    }
+    .feild-wrapper{
+        padding: 0 .5rem;
+        line-height: 1rem;
+        .input-feild{
+            display: block;
+            margin-top: .2rem;
+            &::before{
+                color: #999;
+                font-size: .4rem;
+            }
+            input{
+                float: right;
+                width: calc(100% - .8rem);
+                margin-left: .2rem;
+                outline: none;
+                border: none;
+                font-size: .28rem;
+                margin-top: .35rem;
+            }
+            &::after{
+                content: "";
+                display: block;
+                float: right;
+                width: calc(100% - .7rem);
+                height: 1px;
+                background: #e4e4e4;
+            }
+        }
+        .verification-code{
+            input{
+                width: calc(100% - 3rem);
+                margin: 0 0 0 .3rem;
+                float: none;
+            }
+            .veri-btn{
+                float: right;
+                margin-top: .2rem;
+                border: 1px solid #dedede;
+                width: 1.8rem;
+                height: .6rem;
+                line-height: .6rem;
+                font-size: .28rem;
+                color: #999;
+                text-align: center;
+                border-radius: 4px;
+            }
+        }
+    }
+    .tip{
+        font-size: .12rem;
+        color: #999;
+        text-align: center;
+        margin-top: .2rem;
+    }
+    .login-btn{
+        width: 6.5rem;
+        height: .88rem;
+        background: #b5beff;
+        border-radius: 50px;
+        margin: .8rem auto 0;
+        line-height: .88rem;
+        text-align: center;
+        color: #fff;
+        font-size: .32rem;
+        &:active{
+            background: #b0b0ff;
+        }
+    }
+    .sdk-login{
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+        display: block;
+        width: 100%;
+        .dividing-line{
+            font-size: .2rem;
+            color: #999;
+            width: 3.4rem;
+            margin: 0 auto;
+            position: relative;
+            &::after{
+                content: "";
+                display: block;
+                width: 1.5rem;
+                height: 1px;
+                background: #999;
+                position: absolute;
+                top: .15rem;
+                left: -1.5rem;
+            }
+            &::before{
+                content: "";
+                display: block;
+                width: 1.5rem;
+                height: 1px;
+                background: #999;
+                position: absolute;
+                top: .15rem;
+                right: -1.5rem;
+            }
+        }
+        .sdk-list{
+            margin-top: .3rem;
+            margin-bottom: .6rem;
+            .sdk{
+                display: inline-block;
+                width: 2rem;
+                i{
+                    display: block;
+                    font-size: .8rem;
+                }
+                span{
+                    display: block;
+                    color: #999;
+                }
+            }
+            .sina{
+                color: #ee5c5d;
+            }
+            .qq{
+                color: #1ca4ed;
+            }
+            .wechat{
+                color: #3cd034;
+            }
+        }
+        .regiest{
+            margin-bottom: .6rem;
+            font-size: .2rem;
+        }
+    }
+}
+
+.page-user{
+    height: 100%;
+    .banner{
+        padding: .8rem .3rem 0;
+        height: 3rem;
+        background: url('../images/banner.png') 100% 100%;
+        background-size:contain;
+        .user-info{
+            height: 1.4rem;
+            line-height: 1.4rem;
+            &:before{
+                float: right;
+                color: #fff;
+                font-size: .5rem;
+            }
+            .info{
+                float: left;
+                margin-top: .1rem;
+                p{
+                    line-height: .6rem;
+                    color: #fff;
+                }
+                .user-name{
+                    font-size: .5rem;
+                }
+                .level-des{
+                    font-size: .3rem;
+                    .tag{
+                        display: inline-block;
+                        height: .32rem;
+                        line-height: .32rem;
+                        width: auto;
+                        padding: 0 5px;
+                        font-size: .25rem;
+                        background: #ffd800;
+                        border-radius: 4px;
+                    }
+                }
+            }
+            img{
+                float: left;
+                margin-right: .2rem;
+                height: 1.2rem;
+                width: 1.2rem;
+                border: 2px solid #dfe3ff;
+                border-radius: 50px;
+            }
+        }
+        .count{
+            width: 100%;
+            height: .7rem;
+            clear: both;
+            .count-cell{
+                float: left;
+                color: #fff;
+                width: 50%;
+                text-align: center;
+                line-height: .7rem;
+                font-size: .3rem;
+            }
+        }
+    }
+    .menu{
+        height: calc(100% - 3rem);
+        background: #fafafa;
+        padding-bottom: 1rem;
+        .main-menu{
+            height: 1.4rem;
+            background: #fff;
+            border-bottom: 1px solid #ededed;
+            .main-item{
+                float: left;
+                width: 50%;
+                height: 1.4rem;
+                line-height: 1.4rem;
+                text-align: center;
+                i{
+                    font-size: .4rem;
+                    margin-right: .2rem;
+                    color: #b5beff;
+                }
+                span{
+                    font-size: .35rem;
+                    color: #666;
+                }
+            }
+            
+        }
+        .menu-cell{
+            display: block;
+            height: .9rem;
+            line-height: .9rem;
+            padding-left: .3rem;
+            background-color: #fff;
+
+            &:before{
+                float: right;
+                color: #999;
+                margin-right: .3rem
+            }
+            .des{
+                color: #666;
+                &:before{
+                    margin-right: .2rem;
+                    color: #999;
+                }
+            }
+            .tip{
+                float: right;
+                color: #999;
+                font-size: .26rem;
+                margin-right: .2rem;
+            }
+        }
+        .vip,.group,.friend-menu{
+            margin-bottom: .2rem;
+            .tag{
+                display: inline-block;
+                height: .45rem;
+                line-height: .45rem;
+                width: auto;
+                padding: 1px 5px 0;
+                font-size: .25rem;
+                background: #dc9a0d;
+                border-radius: 4px;
+                color: #fff;
+            }
+        }
+        .friend-menu{
+            .invite{
+                position: relative;
+                &:after{
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background: #e4e4e4;
+                }
+            }
+        }
+    }
+    .tab-bar{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 1rem;
+        line-height: 1rem;
+        background: #fff;
+        .tab-item{
+            float: left;
+            width: 25%;
+            text-align: center;
+            color: #999;
+        }
+        .active{
+            color: #b5beff;
+        }
+    }
+}

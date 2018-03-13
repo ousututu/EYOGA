@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!-- 引入YDUI样式 -->
+    <link rel="stylesheet" href="lib/ydui-0.1.3/build/css/ydui.css" />
+    <link rel="stylesheet" href="styles/reset.css"/>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_586629_zky9pnson1ft7qfr.css">
+    <!-- 引入YDUI自适应解决方案类库 -->
+    <script src="lib/ydui-0.1.3/build/js/ydui.flexible.js"></script>
+  </head>
+  <body>
+    <div class="page page-register">
+      <header class="m-navbar">
+        <a href="login.html" class="navbar-item">
+          <i class="back-ico"></i>
+        </a>
+        <div class="navbar-center">
+          <span class="navbar-title">注册</span>
+        </div>
+      </header>
+      <div class="register-feild feild-wrapper">
+        <label class="input-feild iconfont ic-phone">
+          <input type="text" id="telphone" placeholder="请输入手机号">
+        </label>
+        <label class="input-feild verification-code iconfont ic-psw">
+          <input type="text" id="verification" placeholder="请输入短信验证码">
+          <div class="veri-btn">获取验证码</div>
+        </label>
+      </div>
+      <div class="login-btn" id="login-btn">
+        下一步
+      </div>
+      <div class="tip">注册表明已阅读并接受<a href="javascript:;">"用户服务协议"</a></div>
+      <div class="sdk-login">
+        <div class="dividing-line">
+          你也可以通过以下方式登录
+        </div>
+        <div class="sdk-list">
+          <ul>
+            <li class="sdk sina">
+              <i class="iconfont ic-weibo"></i>
+              <span>微博</span>
+            </li>
+            <li class="sdk qq">
+                <i class="iconfont ic-qq"></i>
+                <span>QQ</span>
+            </li>
+            <li class="sdk wechat">
+                <i class="iconfont ic-wechat"></i>
+                <span>微信</span>
+            </li>
+          </ul>
+        </div>
+          <div class="regiest">已有账号？<a href="login.html">立即登录</a></div>
+      </div>
+    </div>
+    <!-- 引入jQuery 2.0+ -->
+    <script src="lib/zepto.min.js"></script>
+    <!-- 引入YDUI脚本 -->
+    <script src="lib/ydui-0.1.3/build/js/ydui.js"></script>
+  </body>
+</html>
+
