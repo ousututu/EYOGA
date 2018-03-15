@@ -506,7 +506,7 @@
     }
 }
 
-.page-attention{
+.page-attention,.page-fans{
     
    .m-navbar{
        position: fixed;
@@ -546,6 +546,95 @@
                     color: #999;
                 }
             }
+            .set-foucs{
+                border-color: #b5beff;
+                color: #b5beff
+            }
         }
+    }
+}
+
+.page-download{
+    .m-navbar{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .list-wrapper{
+        margin: .9rem 0 0;
+        padding: .2rem .3rem 0;
+        .list-item{
+            width: 3.35rem;
+            float: left;
+            margin-bottom: .2rem;
+            
+            &:nth-child(2n) {
+                margin-left: .2rem;
+            }
+
+            &:last-child{
+                margin-bottom: 1.2rem;
+            }
+
+            .box-wrapper{
+                width: 3.35rem;
+                height: 2.4rem;
+                border: 1px solid  #e4e4e4;
+                padding: .2rem;
+                background: #fff;
+                .btn-wrapper{
+                    height: .32rem;
+                    i{
+                        float: right;
+                        line-height: .38rem;
+                    }
+                    .ic-check{
+                        color: #b5beff;
+                    }
+                    .ic-ucheck{
+                        color: #e4e4e4;
+                    }
+                    span{
+                        display: inline-block;
+                        width: 1rem;
+                        height: .4rem;
+                        line-height: .4rem;
+                        text-align: center;
+                        font-size: .1rem;
+                        border: 1px solid #e4e4e4;
+                        border-radius: .4rem;
+                        color: #999;
+                    }
+                }
+                img{
+                    margin-top: .2rem;    
+                }
+            }
+            .action-name{
+                margin-top: .2rem;
+                color: #333;
+                font-size: .28rem;
+            }
+            .action-info{
+                margin-top: .1rem;
+                color: #999;
+                font-size: .2rem;
+                &::before{
+                    margin-right: .1rem;
+                    color: #999;
+                }
+            }
+        }
+    }
+    .del-btn{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 1rem;
+        line-height: 1rem;
+        text-align: center;
+        background: #b5beff;
+        color: #fff;
+        font-size: .35rem;
     }
 }
