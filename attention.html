@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!-- 引入YDUI样式 -->
+    <link rel="stylesheet" href="lib/ydui-0.1.3/build/css/ydui.css" />
+    <link rel="stylesheet" href="styles/reset.css"/>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_586629_nk8mt3m00tq08uxr.css">
+    <!-- 引入YDUI自适应解决方案类库 -->
+    <script src="lib/ydui-0.1.3/build/js/ydui.flexible.js"></script>
+    <script src="lib//jquery.min.js"></script>
+  </head>
+  <body id="list-container">
+    <div class="page page-attention">
+      <header class="m-navbar">
+        <a href="#" class="navbar-item">
+          <i class="back-ico"></i>
+        </a>
+        <div class="navbar-center">
+          <span class="navbar-title">我的关注</span>
+        </div>
+      </header>
+
+      <div class="list-wrapper" id="list-wrapper">
+        <div class="list-item">
+            <img src="images/avatar.jpeg" alt="avatar">
+            <div class="info">
+              <p>吕不韦</p>
+              <p><span>女</span> <span>浙江</span> <span> 杭州</span></p>
+            </div>
+            <div class="action">
+              取消
+            </div>
+        </div>
+        <div class="list-item">
+            <img src="images/avatar.jpeg" alt="avatar">
+            <div class="info">
+              <p>吕不韦</p>
+              <p><span>女</span> <span>浙江</span> <span> 杭州</span></p>
+            </div>
+            <div class="action">
+              取消
+            </div>
+        </div>
+        <div class="list-item">
+            <img src="images/avatar.jpeg" alt="avatar">
+            <div class="info">
+              <p>吕不韦</p>
+              <p><span>女</span> <span>浙江</span> <span> 杭州</span></p>
+            </div>
+            <div class="action">
+              取消
+            </div>
+        </div>
+        <div class="list-item">
+            <img src="images/avatar.jpeg" alt="avatar">
+            <div class="info">
+              <p>吕不韦</p>
+              <p><span>女</span> <span>浙江</span> <span> 杭州</span></p>
+            </div>
+            <div class="action">
+              取消
+            </div>
+        </div>
+        <div class="list-item">
+            <img src="images/avatar.jpeg" alt="avatar">
+            <div class="info">
+              <p>吕不韦</p>
+              <p><span>女</span> <span>浙江</span> <span> 杭州</span></p>
+            </div>
+            <div class="action">
+              取消
+            </div>
+        </div>
+        <div class="list-item">
+            <img src="images/avatar.jpeg" alt="avatar">
+            <div class="info">
+              <p>吕不韦</p>
+              <p><span>女</span> <span>浙江</span> <span> 杭州</span></p>
+            </div>
+            <div class="action">
+              取消
+            </div>
+        </div>
+        <div class="list-item">
+            <img src="images/avatar.jpeg" alt="avatar">
+            <div class="info">
+              <p>吕不韦</p>
+              <p><span>女</span> <span>浙江</span> <span> 杭州</span></p>
+            </div>
+            <div class="action">
+              取消
+            </div>
+        </div>
+        <div class="list-item">
+            <img src="images/avatar.jpeg" alt="avatar">
+            <div class="info">
+              <p>吕不韦</p>
+              <p><span>女</span> <span>浙江</span> <span> 杭州</span></p>
+            </div>
+            <div class="action">
+              取消
+            </div>
+        </div>
+        <div class="list-item">
+            <img src="images/avatar.jpeg" alt="avatar">
+            <div class="info">
+              <p>吕不韦</p>
+              <p><span>女</span> <span>浙江</span> <span> 杭州</span></p>
+            </div>
+            <div class="action">
+              取消
+            </div>
+        </div>
+        <div class="list-item">
+            <img src="images/avatar.jpeg" alt="avatar">
+            <div class="info">
+              <p>吕不韦</p>
+              <p><span>女</span> <span>浙江</span> <span> 杭州</span></p>
+            </div>
+            <div class="action">
+              取消
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- 引入jQuery 2.0+ -->
+    <script src="lib/zepto.min.js"></script>
+    <!-- 引入YDUI脚本 -->
+    <script src="lib/ydui-0.1.3/build/js/ydui.js"></script>
+
+    <script>
+        /* 通过自定义的方法获取数据【通常是需要定义变量当前第几页page，和每页请求的记录数pageSize】 */
+        var page = 1, pageSize = 10;
+    
+        $('#list-container').infiniteScroll({
+            pageSize: pageSize,
+            initLoad: true,
+            loadingHtml: '<strong>加载中...</strong>', /* 当然也可以<img src="../img/loading.gif" /> */
+            loadListFn: function () {
+                var def = $.Deferred();
+    
+                /* 通过自定义的方法获取数据 */
+                // $.ajax({
+                //     url: '/请求数据方法',
+                //     dataType: 'json',
+                //     data: { page: page, pagesize: pageSize },
+                //     success: function (ret) {
+                //         /* 假设ret.list为后端返回的列表数组 */
+    
+                //         /* 用你喜欢的方法将获取到的数据拼接成HTML，然后插入；*/
+                //         /* 建议使用模板引擎，示例使用artTemplate；https://github.com/aui/artTemplate */
+                //         var html = ret.list + '将数据拼接成html';
+                //         $('#list-wrapper').append(html);
+    
+                //         /* 获取数据，并插入页面后，调用resole，并传入当前获取的记录列表集合 */
+                //         def.resolve(ret.list);
+    
+                //         /* 页码自增1 */
+                //         ++page;
+                //     }
+                // });
+
+                const list = []
+                for(let i = 0; i < 10; i ++) {
+                  list.push({
+                    avatar: 'images/avatar.jpeg',
+                    name: '吕不韦',
+                    sex: '女',
+                    provance: '浙江',
+                    city: '杭州'
+                  })
+                }
+                
+                const getItemStr = function (data) {
+                  return '<div class="list-item">'
+                  + '<img src="' + data.avatar + '" alt="avatar">'
+                  + '<div class="info">'
+                  + '<p>' + data.name + '</p>'
+                  + '<p><span>' + data.sex + '</span> <span>' + data.provance + '</span> <span> ' + data.city + '</span></p>'
+                  + '</div>'
+                  + '<div class="action">'
+                  + '取消'
+                  + '</div>'
+                  + '</div>'
+                }
+
+                setTimeout(function() {
+                  let str = ''
+                  list.forEach(element => {
+                    str += getItemStr(element)
+                  });
+
+                  $('#list-wrapper').append(str);
+    
+                  def.resolve(list);
+
+                  ++page;
+                }, 2000)
+    
+                return def.promise();
+            }
+        });
+    </script>
+  </body>
+</html>
+
