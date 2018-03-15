@@ -286,4 +286,118 @@
     .page-user .tab-bar .active {
       color: #b5beff; }
 
+.page-info {
+  background: #fafafa;
+  min-height: 100%; }
+  .page-info .info-form .avatar-cell {
+    display: block;
+    background: #fff;
+    height: 1.6rem;
+    padding: .24rem .3rem;
+    margin-bottom: .2rem; }
+    .page-info .info-form .avatar-cell img {
+      float: left;
+      width: 1.12rem;
+      height: 1.12rem;
+      border-radius: 50px; }
+    .page-info .info-form .avatar-cell .des {
+      float: right;
+      position: relative;
+      padding-right: .35rem;
+      line-height: 1.12rem;
+      font-size: .28rem;
+      color: #999; }
+      .page-info .info-form .avatar-cell .des::before {
+        position: absolute;
+        right: 0;
+        color: #999; }
+    .page-info .info-form .avatar-cell input {
+      visibility: hidden;
+      height: 1px;
+      width: 1px; }
+  .page-info .info-form .feild-cell {
+    display: block;
+    height: 1rem;
+    background: #fff;
+    padding: .3rem .3rem;
+    position: relative; }
+    .page-info .info-form .feild-cell::after {
+      content: "";
+      display: block;
+      width: calc(100% - .3rem);
+      height: 1px;
+      background: #e4e4e4;
+      position: absolute;
+      bottom: 0; }
+    .page-info .info-form .feild-cell span {
+      float: left; }
+    .page-info .info-form .feild-cell .input-wrapper {
+      position: relative;
+      padding-right: .35rem; }
+      .page-info .info-form .feild-cell .input-wrapper::before {
+        position: absolute;
+        right: 0;
+        color: #999; }
+      .page-info .info-form .feild-cell .input-wrapper div, .page-info .info-form .feild-cell .input-wrapper input, .page-info .info-form .feild-cell .input-wrapper select {
+        float: right;
+        width: 70%;
+        height: .4rem;
+        border: none;
+        outline: none;
+        text-align: right;
+        color: #333; }
+      .page-info .info-form .feild-cell .input-wrapper #feild-birth {
+        width: auto; }
+      .page-info .info-form .feild-cell .input-wrapper select {
+        width: auto; }
+      .page-info .info-form .feild-cell .input-wrapper div {
+        color: #999; }
+  .page-info .info-form .no-border::after {
+    background: transparent; }
+  .page-info .info-form .sdk-cell {
+    margin-top: .2rem;
+    display: block;
+    height: 1rem;
+    background: #fff;
+    padding: .3rem .3rem;
+    position: relative; }
+    .page-info .info-form .sdk-cell::after {
+      content: "";
+      display: block;
+      width: calc(100% - .3rem);
+      height: 1px;
+      background: #e4e4e4;
+      position: absolute;
+      bottom: 0; }
+    .page-info .info-form .sdk-cell:last-child::after {
+      background: transparent; }
+    .page-info .info-form .sdk-cell span {
+      float: left; }
+    .page-info .info-form .sdk-cell .input-wrapper {
+      position: relative;
+      padding-right: .35rem; }
+      .page-info .info-form .sdk-cell .input-wrapper::before {
+        position: absolute;
+        right: 0;
+        color: #999; }
+      .page-info .info-form .sdk-cell .input-wrapper div, .page-info .info-form .sdk-cell .input-wrapper input, .page-info .info-form .sdk-cell .input-wrapper select {
+        float: right;
+        width: 70%;
+        height: .4rem;
+        border: none;
+        outline: none;
+        text-align: right;
+        color: #333; }
+      .page-info .info-form .sdk-cell .input-wrapper #feild-birth {
+        width: auto; }
+      .page-info .info-form .sdk-cell .input-wrapper select {
+        width: auto; }
+      .page-info .info-form .sdk-cell .input-wrapper div {
+        color: #999; }
+      .page-info .info-form .sdk-cell .input-wrapper .sdk-list {
+        line-height: .48rem; }
+        .page-info .info-form .sdk-cell .input-wrapper .sdk-list i {
+          margin-right: .08rem;
+          font-size: .45rem; }
+
 /*# sourceMappingURL=main.css.map */
