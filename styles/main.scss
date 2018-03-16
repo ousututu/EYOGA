@@ -638,3 +638,136 @@
         font-size: .35rem;
     }
 }
+
+.page-post{
+    padding-top: .9rem;
+    .m-navbar{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    .list-wrapper{
+        
+        .list-item{
+            position: relative;
+            padding: .2rem .3rem;
+            border-bottom: 1px solid #e4e4e4;
+            background: #fff;
+            .flag{
+                display: none;
+                position: absolute;
+                top: .26rem;
+                right: .4rem;
+                color: #b5beff;
+                font-size: .35rem;
+            }
+            .ic-ucheck{
+                color: #999;
+            }
+            .info{
+                height: 1.12rem;
+                .user-info{
+                    float: left;
+                    width: calc(100% - 2.12rem);
+                    margin-left: .2rem;
+                    height: 1.12rem;
+                    .user-name{
+                        margin-top: .1rem;
+                        font-size: .32rem;
+                        color: #333;
+                    }
+                    .user-level{
+                        display: inline-block;
+                        font-size: .24rem;
+                        border-radius: 4px;
+                        padding: 0 .15rem;
+                        background: #ffd800;
+                        color: #fff;
+                    }
+                }
+                img{
+                    float: left;
+                    width: 1.12rem;
+                    height: 1.12rem;
+                    border-radius: 1.12rem;
+                }
+                .post-time{
+                    float: left;
+                    width: .8rem;
+                    padding-top: .6rem;
+                }
+            }
+            .detail{
+                margin-top: .3rem;
+                .title{
+                    font-size: .34rem;
+                    color: #333;
+                }
+                .msg{
+                    font-size: .28rem;
+                    color: #999;
+                }
+            }
+            .imgs{
+                margin-top: .2rem;
+                div{
+                    display: inline-block;
+                    width: 3.4rem;
+                    height: 3.4rem;
+                    margin-bottom: .2rem;
+                    &:nth-child(2n) {
+                        margin-left: .1rem;
+                    }
+                    img{
+                        margin: 0 auto;
+                        max-width: 3.4rem;
+                        height: 3.4rem;
+                    }
+                }
+            }
+            .count{
+                margin-top: .2rem;
+                text-align: right;
+                color: #999;
+                span{
+                    margin-left: .2rem;
+                    &::before{
+                        margin-right: .1rem;
+                    }
+                }
+                .ic-heart-active{
+                    &::before{
+                        color: red;
+                    }
+                }
+            }
+            .hidden{
+                display: none;
+            }
+        }
+    }
+    .isEditMode{
+        margin-bottom: 1rem;
+        .list-item{
+            .imgs{
+                display: none;
+            }
+            .flag{
+                display: block;
+            }
+        }
+    }
+    .del-action{
+        display: none;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 1rem;
+        line-height: 1rem;
+        text-align: center;
+        background: #b5beff;
+        color: #fff;
+        font-size: .35rem;
+    }
+}

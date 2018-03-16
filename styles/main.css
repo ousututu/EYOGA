@@ -501,4 +501,103 @@
   color: #fff;
   font-size: .35rem; }
 
+.page-post {
+  padding-top: .9rem; }
+  .page-post .m-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10; }
+  .page-post .list-wrapper .list-item {
+    position: relative;
+    padding: .2rem .3rem;
+    border-bottom: 1px solid #e4e4e4;
+    background: #fff; }
+    .page-post .list-wrapper .list-item .flag {
+      display: none;
+      position: absolute;
+      top: .26rem;
+      right: .4rem;
+      color: #b5beff;
+      font-size: .35rem; }
+    .page-post .list-wrapper .list-item .ic-ucheck {
+      color: #999; }
+    .page-post .list-wrapper .list-item .info {
+      height: 1.12rem; }
+      .page-post .list-wrapper .list-item .info .user-info {
+        float: left;
+        width: calc(100% - 2.12rem);
+        margin-left: .2rem;
+        height: 1.12rem; }
+        .page-post .list-wrapper .list-item .info .user-info .user-name {
+          margin-top: .1rem;
+          font-size: .32rem;
+          color: #333; }
+        .page-post .list-wrapper .list-item .info .user-info .user-level {
+          display: inline-block;
+          font-size: .24rem;
+          border-radius: 4px;
+          padding: 0 .15rem;
+          background: #ffd800;
+          color: #fff; }
+      .page-post .list-wrapper .list-item .info img {
+        float: left;
+        width: 1.12rem;
+        height: 1.12rem;
+        border-radius: 1.12rem; }
+      .page-post .list-wrapper .list-item .info .post-time {
+        float: left;
+        width: .8rem;
+        padding-top: .6rem; }
+    .page-post .list-wrapper .list-item .detail {
+      margin-top: .3rem; }
+      .page-post .list-wrapper .list-item .detail .title {
+        font-size: .34rem;
+        color: #333; }
+      .page-post .list-wrapper .list-item .detail .msg {
+        font-size: .28rem;
+        color: #999; }
+    .page-post .list-wrapper .list-item .imgs {
+      margin-top: .2rem; }
+      .page-post .list-wrapper .list-item .imgs div {
+        display: inline-block;
+        width: 3.4rem;
+        height: 3.4rem;
+        margin-bottom: .2rem; }
+        .page-post .list-wrapper .list-item .imgs div:nth-child(2n) {
+          margin-left: .1rem; }
+        .page-post .list-wrapper .list-item .imgs div img {
+          margin: 0 auto;
+          max-width: 3.4rem;
+          height: 3.4rem; }
+    .page-post .list-wrapper .list-item .count {
+      margin-top: .2rem;
+      text-align: right;
+      color: #999; }
+      .page-post .list-wrapper .list-item .count span {
+        margin-left: .2rem; }
+        .page-post .list-wrapper .list-item .count span::before {
+          margin-right: .1rem; }
+      .page-post .list-wrapper .list-item .count .ic-heart-active::before {
+        color: red; }
+    .page-post .list-wrapper .list-item .hidden {
+      display: none; }
+  .page-post .isEditMode {
+    margin-bottom: 1rem; }
+    .page-post .isEditMode .list-item .imgs {
+      display: none; }
+    .page-post .isEditMode .list-item .flag {
+      display: block; }
+  .page-post .del-action {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    background: #b5beff;
+    color: #fff;
+    font-size: .35rem; }
+
 /*# sourceMappingURL=main.css.map */
