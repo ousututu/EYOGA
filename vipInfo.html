@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!-- 引入YDUI样式 -->
+    <link rel="stylesheet" href="lib/ydui-0.1.3/build/css/ydui.css" />
+    <link rel="stylesheet" href="styles/reset.css"/>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_586629_f7oan8slkdquxr.css">
+    <!-- 引入YDUI自适应解决方案类库 -->
+    <script src="lib/ydui-0.1.3/build/js/ydui.flexible.js"></script>
+    <script src="lib/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="page page-vip-info">
+      <header class="m-header-bar">
+        <img src="images/avatar.jpeg" alt="avatar">
+        <p class="user-name">王丽丽</p>
+      </header>
+      <div class="swiper-wrapper">
+        <p>高级会员特权</p>
+        <div class="swiper">
+          <div class="list">
+            <img src="images/vip.png" alt="vip-info">
+            <img src="images/vip.png" alt="vip-info">
+            <img src="images/vip.png" alt="vip-info">
+            <img src="images/vip.png" alt="vip-info">
+            <img src="images/vip.png" alt="vip-info">
+            <img src="images/vip.png" alt="vip-info">
+            <img src="images/vip.png" alt="vip-info">
+            <img src="images/vip.png" alt="vip-info">
+          </div>
+        </div>
+        <div class="anchors">
+        </div>
+      </div>
+      <div class="price-tag">
+        <p>高级会员特权</p>
+        <div class="tag">
+          <div>
+            <span class="type">1个月高级VIP</span>
+            <span class="price">30元</span>
+            <span class="price old">72元</span>
+          </div>
+          <div>
+            <span class="des">30/月</span>
+            <a class="buy-btn">开通</a>
+          </div>
+        </div>
+        <div class="tag">
+          <div>
+            <span class="type">1个月高级VIP</span>
+            <span class="price">30元</span>
+            <span class="price old">72元</span>
+          </div>
+          <div>
+            <span class="des">30/月</span>
+            <a class="buy-btn">开通</a>
+          </div>
+        </div>
+        <div class="tag">
+          <div>
+            <span class="type">1个月高级VIP</span>
+            <span class="price">30元</span>
+            <span class="price old">72元</span>
+          </div>
+          <div>
+            <span class="des">30/月</span>
+            <a class="buy-btn">开通</a>
+          </div>
+        </div>
+        <span class="tip">购买后5分钟内生效，若无法正常使用，请尝试重启她她瑜伽客户端</span>
+      </div>
+    </div>
+    <!-- 引入jQuery 2.0+ -->
+    <script src="lib/zepto.min.js"></script>
+    <!-- 引入YDUI脚本 -->
+    <script src="lib/ydui-0.1.3/build/js/ydui.js"></script>
+
+    <script>
+      const $vipList = $('.list')
+      const $swiper = $('.swiper')
+      const $anchors = $('.anchors')
+      const pageSize = $(window).width()
+      const n = Math.ceil($vipList.prop("scrollWidth") / pageSize)
+      
+      const setAnchors = function(n) {
+        let str = ''
+        for(let i = 0; i < n; i++) {
+          str += i === 0 ? '<span class="active">●</span>' : "<span>●</span>"
+        }
+        return str
+      }
+      $anchors.append(setAnchors(n))
+      $swiper.on('scroll', function(){
+        const currentIndex = Math.floor(this.scrollLeft / pageSize * 2)
+        const $temp = $($anchors.find('span')[currentIndex])
+        $temp.addClass('active')
+          .siblings()
+          .removeClass('active')
+      })
+    </script>
+  </body>
+</html>
+
