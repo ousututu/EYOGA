@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!-- 引入YDUI样式 -->
+    <link rel="stylesheet" href="lib/ydui-0.1.3/build/css/ydui.css" />
+    <link rel="stylesheet" href="styles/reset.css"/>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_586629_f7oan8slkdquxr.css">
+    <!-- 引入YDUI自适应解决方案类库 -->
+    <script src="lib/ydui-0.1.3/build/js/ydui.flexible.js"></script>
+    <script src="lib/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="page page-level">
+      <header class="m-navbar">
+        <a href="#" class="navbar-item">
+          <i class="back-ico"></i>
+        </a>
+        <div class="navbar-center">
+          <span class="navbar-title">我的等级</span>
+        </div>
+        <a href="#" class="navbar-item">
+          明细
+        </a>
+      </header>
+      <div class="content">
+        <div class="banner">
+          <span class="tag current-level">Lv 0</span>
+          <span class="tag next-level">Lv 1</span>
+          <img src="images/avatar.jpeg" alt="avatar">
+          <p>王丽丽<span class="label">Lv0</span></p>
+          <div class="progress-wrapper">
+            <div class="progress-bg">
+              <!-- progress-bar  的宽度是剩余的长度 -->
+              <div class="progress-bar" style="width: 30%;"></div>
+            </div>
+            <span class="des">成长值</span>
+            <span class="val">7/10</span>
+          </div>
+        </div>
+
+        <div class="privilege">
+          <div class="title iconfont ic-right">
+            <span>当前等级特权</span>
+            <span>了解等级特权</span>
+          </div>
+          <div class="privilege-list">
+            <div class="item">
+              <i class="iconfont ic-text"></i>
+              <p>私信文字</p>
+              <span>成长值>3</span>
+            </div>
+            <div class="item">
+              <i class="iconfont ic-expression"></i>
+              <p>私信表情</p>
+              <span>成长值>3</span>
+            </div>
+            <div class="item">
+              <i class="iconfont ic-write-post"></i>
+              <p>发帖</p>
+              <span>成长值>3</span>
+            </div>
+            <div class="item">
+              <i class="iconfont ic-comment"></i>
+              <p>评论</p>
+              <span>成长值>3</span>
+            </div>
+          </div>
+        </div>
+        <div class="raiders">
+          <div class="title">
+            <span>成长攻略</span>
+          </div>
+          <div class="table">
+            <p class="des">
+              完成相应任务即可获得成长值
+            </p>
+            <table class="table-detail">
+              <thead>
+                <th style="width: 30%">任务类型</th>
+                <th style="width: 30%">任务名称</th>
+                <th style="width: 20%">成长值</th>
+                <th style="width: 20%">单日次数</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 30%" rowspan="5">日常任务</td>
+                  <td style="width: 30%">签到</td>
+                  <td style="width: 20%">+1</td>
+                  <td style="width: 20%">1</td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">签到</td>
+                  <td style="width: 20%">+1</td>
+                  <td style="width: 20%">1</td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">签到</td>
+                  <td style="width: 20%">+1</td>
+                  <td style="width: 20%">1</td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">签到</td>
+                  <td style="width: 20%">+1</td>
+                  <td style="width: 20%">1</td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">签到</td>
+                  <td style="width: 20%">+1</td>
+                  <td style="width: 20%">1</td>
+                </tr>
+                <tr>
+                  <td style="width: 30%" rowspan="2">新手任务</td>
+                  <td style="width: 30%">签到</td>
+                  <td style="width: 20%">+1</td>
+                  <td style="width: 20%">1</td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">签到</td>
+                  <td style="width: 20%">+1</td>
+                  <td style="width: 20%">1</td>
+                </tr>
+                <tr>
+                  <td style="width: 30%" rowspan="3">新手任务</td>
+                  <td style="width: 30%">签到</td>
+                  <td style="width: 20%">+1</td>
+                  <td style="width: 20%">1</td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">签到</td>
+                  <td style="width: 20%">+1</td>
+                  <td style="width: 20%">1</td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">签到</td>
+                  <td style="width: 20%">+1</td>
+                  <td style="width: 20%">1</td>
+                </tr>
+                <tr>
+                  <td style="width: 30%" rowspan="3">额外奖励</td>
+                  <td style="width: 30%">签到</td>
+                  <td style="width: 20%">+1</td>
+                  <td style="width: 20%">1</td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">签到</td>
+                  <td style="width: 20%">+1</td>
+                  <td style="width: 20%">1</td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">签到</td>
+                  <td style="width: 20%">+1</td>
+                  <td style="width: 20%">1</td>
+                </tr>
+                <tr>
+                  <td style="width: 30%" rowspan="2">新手任务</td>
+                  <td style="width: 30%">签到</td>
+                  <td style="width: 20%">+1</td>
+                  <td style="width: 20%">1</td>
+                </tr>
+                <tr>
+                  <td style="width: 30%">签到</td>
+                  <td style="width: 20%">+1</td>
+                  <td style="width: 20%">1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 引入jQuery 2.0+ -->
+    <script src="lib/zepto.min.js"></script>
+    <!-- 引入YDUI脚本 -->
+    <script src="lib/ydui-0.1.3/build/js/ydui.js"></script>
+  </body>
+</html>
+
