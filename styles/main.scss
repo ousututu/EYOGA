@@ -1123,3 +1123,39 @@
         }
     }
 }
+
+.page-grow{
+    .list{
+        background: #fff;
+        border-bottom: 1px solid #e4e4e4;
+        .item{
+            width: 100%;
+            height: 1.4rem;
+            padding-left: .3rem;
+            border-bottom: 1px solid #e4e4e4;
+            &:last-child{
+                border-bottom: none;
+            }
+            .result{
+                float: left;
+                line-height: 1.4rem;
+                font-size: .36rem;
+                color: #5fdc76;
+                margin-right: .5rem;
+            }
+            .info{
+                padding: .24rem 0;
+                p{
+                    &:first-child{
+                        font-size: .32rem;
+                        color: #333;
+                    }
+                    &:last-child{
+                        font-size: .32rem;
+                        color: #999;
+                    }
+                }
+            }
+        }
+    }
+}
