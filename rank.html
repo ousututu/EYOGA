@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!-- 引入YDUI样式 -->
+    <link rel="stylesheet" href="lib/ydui-0.1.3/build/css/ydui.css" />
+    <link rel="stylesheet" href="styles/reset.css"/>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_586629_pbtg75il4a2it3xr.css">
+    <!-- 引入YDUI自适应解决方案类库 -->
+    <script src="lib/ydui-0.1.3/build/js/ydui.flexible.js"></script>
+    <script src="lib/jquery.min.js"></script>
+  </head>
+  <body style="overflow-x: hidden;height: 100%;">
+    <div class="page page-rank">
+      <header class="m-navbar">
+        <a href="#" class="navbar-item">
+          <i class="back-ico"></i>
+        </a>
+        <div class="navbar-center">
+          <span class="navbar-title">排行榜</span>
+        </div>
+      </header>
+
+      <div class="tab-wrapper">
+        <div class="tab-cell active">
+          朋友们
+        </div>
+        <div class="tab-cell">
+          所有人
+        </div>
+      </div>
+      <div class="content-wrapper" style="transform: translateX(0);">
+        <div class="content friend">
+            <div class="item-cell">
+              <img src="images/avatar.jpeg" alt="avatar">
+              <div class="info">
+                <p class="name">王莉莉</p>
+                <p class="time">练习时长  1312分钟</p>
+              </div>
+            </div>
+            <div class="item-cell">
+                <img src="images/avatar.jpeg" alt="avatar">
+                <div class="info">
+                  <p class="name">王莉莉</p>
+                  <p class="time">练习时长  1312分钟</p>
+                </div>
+              </div>
+              <div class="item-cell">
+                  <img src="images/avatar.jpeg" alt="avatar">
+                  <div class="info">
+                    <p class="name">王莉莉</p>
+                    <p class="time">练习时长  1312分钟</p>
+                  </div>
+                </div>
+                <div class="item-cell">
+                    <img src="images/avatar.jpeg" alt="avatar">
+                    <div class="info">
+                      <p class="name">王莉莉</p>
+                      <p class="time">练习时长  1312分钟</p>
+                    </div>
+                  </div>
+                  <div class="item-cell">
+                      <img src="images/avatar.jpeg" alt="avatar">
+                      <div class="info">
+                        <p class="name">王莉莉</p>
+                        <p class="time">练习时长  1312分钟</p>
+                      </div>
+                    </div>
+
+        </div>
+        <div class="content all">
+            <div class="item-cell">
+                <img src="images/avatar.jpeg" alt="avatar">
+                <div class="info">
+                  <p class="name">王莉莉</p>
+                  <p class="time">练习时长  1312分钟</p>
+                </div>
+              </div>
+              <div class="item-cell">
+                  <img src="images/avatar.jpeg" alt="avatar">
+                  <div class="info">
+                    <p class="name">王莉莉</p>
+                    <p class="time">练习时长  1312分钟</p>
+                  </div>
+                </div>
+                <div class="item-cell">
+                    <img src="images/avatar.jpeg" alt="avatar">
+                    <div class="info">
+                      <p class="name">王莉莉</p>
+                      <p class="time">练习时长  1312分钟</p>
+                    </div>
+                  </div>
+                  <div class="item-cell">
+                      <img src="images/avatar.jpeg" alt="avatar">
+                      <div class="info">
+                        <p class="name">王莉莉</p>
+                        <p class="time">练习时长  1312分钟</p>
+                      </div>
+                    </div>
+                    <div class="item-cell">
+                        <img src="images/avatar.jpeg" alt="avatar">
+                        <div class="info">
+                          <p class="name">王莉莉</p>
+                          <p class="time">练习时长  1312分钟</p>
+                        </div>
+                      </div>
+                      <div class="item-cell">
+                          <img src="images/avatar.jpeg" alt="avatar">
+                          <div class="info">
+                            <p class="name">王莉莉</p>
+                            <p class="time">练习时长  1312分钟</p>
+                          </div>
+                        </div>
+        </div>
+      </div>
+    </div>
+    <!-- 引入jQuery 2.0+ -->
+    <script src="lib/zepto.min.js"></script>
+    <!-- 引入YDUI脚本 -->
+    <script src="lib/ydui-0.1.3/build/js/ydui.js"></script>
+    <script>
+      const $tabWrapper = $('.tab-wrapper')
+      const $contentWrapper = $('.content-wrapper')
+
+      $tabWrapper.on('click', '.tab-cell', function (evt) {
+        const $this = $(this)
+        if (!$this.hasClass('active')) {
+          $this.addClass('active').siblings().removeClass('active')
+          if ($tabWrapper.hasClass('switch')) {
+            $tabWrapper.removeClass('switch')
+            $contentWrapper.css('transform', 'translateX(0)')
+          } else {
+            $tabWrapper.addClass('switch')
+            $contentWrapper.css('transform', 'translateX(-50%)')
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
+

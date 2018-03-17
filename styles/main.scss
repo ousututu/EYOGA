@@ -1,4 +1,14 @@
-// login page
+// page
+
+.page{
+    padding-top: .9rem;
+    .m-navbar{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+}
 
 .page-login,.page-register{
     position: relative;
@@ -769,5 +779,81 @@
         background: #b5beff;
         color: #fff;
         font-size: .35rem;
+    }
+}
+
+.page-rank{
+    padding-top: 1.7rem;
+    height: 100%;
+    .tab-wrapper{
+        position: fixed;
+        z-index: 9;
+        top: .9rem;
+        height: .8rem;
+        width: 100%;
+        line-height: .8rem;
+        border-bottom: 1px solid #e4e4e4;
+        background: #fff;
+        &::after{
+            content: "";
+            display: block;
+            margin-top: calc(.8rem - 2px);
+            margin-left: 0;
+            width: 50%;
+            height: 2px;
+            background: #b5beff;
+            transition: margin-left .3s ease;
+        }
+
+        .tab-cell{
+            float: left;
+            width: 50%;
+            text-align: center;
+            color: #333;
+            transition: color .3s ease;
+        }
+        .active{
+            color: #b5beff;
+        }
+    }
+    .switch::after{
+        margin-left: 50%;
+    }
+
+    .content-wrapper{
+        width: 200%;
+        height: 100%;
+        transition: transform .3s ease;
+        .content{
+            float: left;
+            width: 50%;
+            height: 100%;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+            .item-cell{
+                height: 1.6rem;
+                padding: .24rem .3rem;
+                border-bottom: 1px solid #e4e4e4;
+                img{
+                    float: left;
+                    margin-right: .2rem;
+                    width: 1.12rem;
+                    height: 1.12rem;
+                    border-radius: 1.12rem;
+                }
+                .info{
+                    padding: .05rem 0 .1rem;
+                    .name{
+                        color: #333;
+                        font-size: .32rem;
+                    }
+                    .time{
+                        margin-top: .05rem;
+                        color: #999;
+                        font-size: .28rem;
+                    }
+                }
+            }
+        }
     }
 }
