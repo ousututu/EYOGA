@@ -1367,3 +1367,51 @@
         }
     }
 }
+
+.page-buy{
+    position: relative;
+    height: 100%;
+    .order-info{
+        background: #fff;
+        padding-left: .3rem;
+        .order-name{
+            color: #333;
+            font-size: .24rem;
+            line-height: .8rem;
+            border-bottom: 1px solid #e4e4e4;
+        }
+        .detail{
+            line-height: .8rem;
+            font-size: .24rem;
+            .old-price{
+                float: right;
+                margin-right: .3rem;
+                color: #dc9a0d;
+                font-size: .28rem;
+            }
+        }
+    }
+    .order-action{
+        position: absolute;
+        background: #fff;
+        bottom: 0;
+        width: 100%;
+        height: 1rem;
+        line-height: 1rem;
+        padding-left: .3rem;
+        font-size: .28rem;
+        span{
+            color: #dc9a0d;
+            margin-left: .2rem;
+            font-size: .32rem;
+        }
+        a{
+            float: right;
+            width: 2.4rem;
+            text-align: center;
+            background: #b5beff;
+            color: #fff;
+            font-size: .28rem;
+        }
+    }
+}
