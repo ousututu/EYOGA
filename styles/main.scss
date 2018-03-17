@@ -1075,7 +1075,7 @@
             }
         }
         .table{
-            padding: 0 .3rem .3rem;
+            padding: 0 .3rem;
             p{
                 margin: .2rem .3rem;
                 font-size: .28rem;
@@ -1112,6 +1112,14 @@
                     }
                 }
             }
+        }
+    }
+    .tip-wrapper{
+        padding: .3rem;
+        background: #fff;
+        .tip{
+            color: #999;
+            font-size: .20rem;
         }
     }
 }
