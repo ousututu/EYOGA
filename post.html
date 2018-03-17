@@ -45,8 +45,18 @@
             <p class="title">DAY 1</p>
             <p class="msg">今天锻炼很开心，检查加油加油加油！</p>
           </div>
-          <div class="imgs hidden">
-              <div><img src="images/action.png" alt="pic"></div>
+        
+          <div class="more">
+            <div class="first">
+              <img src="images/avatar.jpeg" alt="pic">
+            </div>
+            <div class="more-box">
+              <div><img src="images/avatar.jpeg" alt="pic"></div>
+              <div class="hasMore">
+                <img src="images/avatar.jpeg" alt="pic">
+                <span>共5张</span>
+              </div>
+            </div>
           </div>
           <div class="count">
             <span class="iconfont ic-heart">6</span>
@@ -119,12 +129,26 @@
 
                   const getImagesStr = function (imgs) {
                     let str = ''
-                    imgs.forEach(img => {
-                      str += '<div><img src="' + img + '" alt="pic"></div>'
-                    })
+                    if (imgs.length >= 3) {
+                      str = '<div class="first">' +
+                        '<img src="' + imgs[0] + '" alt="pic">' +
+                        '</div>' +
+                        '<div class="more-box">' +
+                        '<div><img src="' + imgs[1] + '" alt="pic"></div>' +
+                        '<div class="hasMore">' +
+                        '<img src="' + imgs[2] + '" alt="pic">' +
+                        '<span>共'+ imgs.length +'张</span>' +
+                        '</div>' +
+                        '</div>'
+                    } else {
+                      str = '<div><img src="' + imgs[0] + '" alt="pic"></div>' +
+                      '<div><img src="' + imgs[1] + '" alt="pic"></div>'
+                    }
+                    
                     return str
                   }
                   const active = data.level % 2 === 0 ? "heart" : "heart-active"
+                  const imgClass = data.imgs.length >= 3 ? "more" : "imgs" 
                   return '<div class="list-item">'
                     + '<div class="info">'
                     + '<i class="flag iconfont ic-ucheck"></i>'
@@ -139,7 +163,7 @@
                     + '<p class="title">' + data.title + '</p>'
                     + '<p class="msg">' + data.msg + '</p>'
                     + '</div>'
-                    + '<div class="imgs">'
+                    + '<div class="'+ imgClass +'">'
                     + getImagesStr(data.imgs)
                     + '</div>'
                     + '<div class="count">'

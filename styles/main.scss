@@ -736,6 +736,54 @@
                     }
                 }
             }
+            .more{
+                margin-top: .2rem;
+                .first{
+                    display: inline-block;
+                    margin-right: .1rem;
+                    width: 4.45rem;
+                    height: 4.45rem;
+                    img{
+                        margin: 0 auto;
+                        max-width: 4.45rem;
+                        height: 4.45rem;
+                    }
+                }
+                .more-box{
+                    width: 2.2rem;
+                    float: right;
+                    div{
+                        width: 2.2rem;
+                        height: 2.2rem;
+                        &:last-child{
+                            margin-top: .05rem;
+                        }
+                    }
+                    .hasMore{
+                        position: relative;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background: rgba(0, 0, 0, .3);
+                        }
+                        span{
+                            position: absolute;
+                            display: block;
+                            width: 2.2rem;
+                            height: 2.2rem;
+                            top: 0;
+                            line-height: 2.2rem;
+                            text-align: center;
+                            color: #fff;
+                            font-size: .36rem;
+                        }
+                    }
+                }
+            }
             .count{
                 margin-top: .2rem;
                 text-align: right;
