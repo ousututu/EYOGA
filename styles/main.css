@@ -904,4 +904,58 @@
         font-size: .32rem;
         color: #999; }
 
+.page-level-info {
+  height: 100%; }
+  .page-level-info .content-wrapper {
+    height: 100%; }
+    .page-level-info .content-wrapper .side-menu {
+      width: 2rem;
+      height: 100%;
+      float: left;
+      border-right: 1px solid #e4e4e4;
+      background: #f2f2f2; }
+      .page-level-info .content-wrapper .side-menu .menu-item {
+        text-align: center;
+        padding: .3rem 0;
+        border-bottom: 1px solid #e4e4e4; }
+        .page-level-info .content-wrapper .side-menu .menu-item .level {
+          font-size: .6rem;
+          line-height: .6rem; }
+        .page-level-info .content-wrapper .side-menu .menu-item .des {
+          font-size: .28rem;
+          line-height: .3rem; }
+      .page-level-info .content-wrapper .side-menu .active {
+        background: #fff;
+        color: #7cdb7a; }
+    .page-level-info .content-wrapper .content {
+      height: 100%;
+      background: #fff; }
+      .page-level-info .content-wrapper .content .inner-wrapper {
+        padding-left: 2.3rem; }
+        .page-level-info .content-wrapper .content .inner-wrapper span, .page-level-info .content-wrapper .content .inner-wrapper p {
+          display: block;
+          line-height: .8rem;
+          color: #999;
+          font-size: .24rem;
+          border-bottom: 1px solid #e4e4e4; }
+        .page-level-info .content-wrapper .content .inner-wrapper p {
+          border-bottom: none; }
+      .page-level-info .content-wrapper .content .list {
+        padding-left: 2rem; }
+        .page-level-info .content-wrapper .content .list .item {
+          float: left;
+          width: 33%;
+          text-align: center;
+          margin-bottom: .3rem; }
+          .page-level-info .content-wrapper .content .list .item .iconfont {
+            font-size: .8rem;
+            color: #7cdb7a; }
+          .page-level-info .content-wrapper .content .list .item .des {
+            font-size: .28rem;
+            margin-bottom: .08rem; }
+          .page-level-info .content-wrapper .content .list .item .val {
+            font-size: .24rem;
+            line-height: .24rem;
+            color: #80e392; }
+
 /*# sourceMappingURL=main.css.map */
