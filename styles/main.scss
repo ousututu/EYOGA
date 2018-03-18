@@ -626,7 +626,6 @@
         width: 100%;
     }
     .list-wrapper{
-        margin: .9rem 0 0;
         padding: .2rem .3rem 0;
         .list-item{
             width: 3.35rem;
@@ -652,6 +651,7 @@
                     i{
                         float: right;
                         line-height: .38rem;
+                        display: none;
                     }
                     .ic-check{
                         color: #b5beff;
@@ -691,8 +691,20 @@
             }
         }
     }
+    .isEditMode{
+        .list-item{
+            .box-wrapper{
+                .btn-wrapper{
+                    i{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
     .del-btn{
         position: fixed;
+        display: none;
         bottom: 0;
         width: 100%;
         height: 1rem;
@@ -863,7 +875,7 @@
     .isEditMode{
         margin-bottom: 1rem;
         .list-item{
-            .imgs{
+            .imgs, .more{
                 display: none;
             }
             .flag{
