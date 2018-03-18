@@ -12,55 +12,47 @@
   height: 100%;
   position: relative;
   overflow-x: hidden; }
-  .page-welcome .action-btns {
+  .page-welcome .gust-btn {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    right: .3rem;
+    top: .7rem;
+    color: #999;
+    font-size: .28rem;
     z-index: 10; }
-    .page-welcome .action-btns .gust-btn {
-      position: absolute;
-      right: .3rem;
-      top: .7rem;
-      color: #999;
-      font-size: .28rem; }
-      .page-welcome .action-btns .gust-btn::before {
-        float: right;
-        margin-left: .1rem; }
-    .page-welcome .action-btns .login-btn, .page-welcome .action-btns .register-btn {
-      position: absolute;
-      bottom: 1rem;
-      display: block;
-      width: 3.1rem;
-      height: .88rem;
-      text-align: center;
-      line-height: .88rem;
-      border-radius: .88rem;
-      border: 2px solid #b5beff;
-      font-size: .32rem;
-      color: #b5beff; }
-    .page-welcome .action-btns .login-btn {
-      left: .5rem; }
-    .page-welcome .action-btns .register-btn {
-      right: .5rem; }
-    .page-welcome .action-btns .finish-btn {
-      position: absolute;
-      background: #b5beff;
-      bottom: 1rem;
-      display: none;
-      width: calc(100% - 1rem);
-      height: .88rem;
-      margin-left: .5rem;
-      text-align: center;
-      line-height: .88rem;
-      border-radius: .88rem;
-      font-size: .32rem;
-      color: #fff; }
-  .page-welcome .isLogin .login-btn, .page-welcome .isLogin .register-btn {
-    display: none; }
-  .page-welcome .isLogin .finish-btn {
-    display: block; }
+    .page-welcome .gust-btn::before {
+      float: right;
+      margin-left: .1rem; }
+  .page-welcome .login-btn, .page-welcome .register-btn {
+    position: absolute;
+    bottom: 1rem;
+    display: block;
+    width: 3.1rem;
+    height: .88rem;
+    text-align: center;
+    line-height: .88rem;
+    border-radius: .88rem;
+    border: 2px solid #b5beff;
+    font-size: .32rem;
+    color: #b5beff;
+    z-index: 10; }
+  .page-welcome .login-btn {
+    left: .5rem; }
+  .page-welcome .register-btn {
+    right: .5rem; }
+  .page-welcome .finish-btn {
+    z-index: 10;
+    position: absolute;
+    background: #b5beff;
+    bottom: 1rem;
+    display: none;
+    width: calc(100% - 1rem);
+    height: .88rem;
+    margin-left: .5rem;
+    text-align: center;
+    line-height: .88rem;
+    border-radius: .88rem;
+    font-size: .32rem;
+    color: #fff; }
 
 .page-login, .page-register {
   position: relative;

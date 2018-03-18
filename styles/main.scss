@@ -16,19 +16,13 @@
     height: 100%;
     position: relative;
     overflow-x: hidden;
-    .action-btns{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 10;
         .gust-btn{
             position: absolute;
             right: .3rem;
             top: .7rem;
             color: #999;
             font-size: .28rem;
+            z-index: 10;
             &::before{
                 float: right;
                 margin-left: .1rem;
@@ -46,6 +40,7 @@
             border: 2px solid #b5beff;
             font-size: .32rem;
             color: #b5beff;
+            z-index: 10;
         }
         .login-btn{
             left: .5rem;
@@ -54,6 +49,7 @@
             right: .5rem;
         }
         .finish-btn{
+            z-index: 10;
             position: absolute;
             background: #b5beff;
             bottom: 1rem;
@@ -67,15 +63,6 @@
             font-size: .32rem;
             color: #fff;
         }
-    }
-    .isLogin{
-        .login-btn,.register-btn{
-            display: none;
-        }
-        .finish-btn{
-            display: block;
-        }
-    }
 }
 
 .page-login,.page-register{
