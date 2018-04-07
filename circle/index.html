@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no" name="format-detection" />
+  <!-- 引入YDUI样式 -->
+  <link rel="stylesheet" href="../lib/ydui-0.1.3/build/css/ydui.css" />
+  <link rel="stylesheet" href="../styles/reset.css" />
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/font/iconfont.css">
+  <!-- 引入YDUI自适应解决方案类库 -->
+  <script src="../lib/ydui-0.1.3/build/js/ydui.flexible.js"></script>
+  <script src="../lib/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="page page-circle">
+    <header class="circle-header">
+      <div class="fl-btn">
+        <i class="iconfont ic-bell"></i>
+      </div>
+      <div class="tab-content" data-current-tab='1'>
+        <span data-tab-id='0'>此刻</span>
+        <span data-tab-id='1'>精选</span>
+        <span data-tab-id='2'>关注</span>
+      </div>
+      <div class="fr-btn">
+      </div>
+    </header>
+    <div class="content-wrapper" data-current-content="1">
+      <div class="content current-post">
+        <div class="list-wrapper" id="current-post-wrapper">
+          <div class="current-post-list" id="current-post-list">
+          </div>
+        </div>
+      </div>
+      <div class="content content-featured">
+        <div class="search-btn" id="search-btn">
+          <i class="iconfont ic-search"></i>
+          <span>搜索帖子教程</span>
+        </div>
+        <div class="inner-content" id="featured-list-wrapper">
+          <a href="#">
+            <img src="../images/circle-bg.png" alt="banner">
+          </a>
+          <div class="topic-box">
+            <p>
+              <i class="iconfont ic-host"></i>
+              热门话题
+              <i class="iconfont ic-right"></i>
+            </p>
+            <div class="list-wrapper">
+              <div class="list">
+                <a class="topic-item">
+                  <img src="../images/item-bg.png" alt="info">
+                  <p>#我爱健康餐#</p>
+                </a>
+                <a class="topic-item">
+                  <img src="../images/item-bg.png" alt="info">
+                  <p>#我爱健康餐#</p>
+                </a>
+                <a class="topic-item">
+                  <img src="../images/item-bg.png" alt="info">
+                  <p>#我爱健康餐#</p>
+                </a>
+                <a class="topic-item">
+                  <img src="../images/item-bg.png" alt="info">
+                  <p>#我爱健康餐#</p>
+                </a>
+                <a class="topic-item">
+                  <img src="../images/item-bg.png" alt="info">
+                  <p>#我爱健康餐#</p>
+                </a>
+                <a class="topic-item">
+                  <img src="../images/item-bg.png" alt="info">
+                  <p>#我爱健康餐#</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="list-box">
+            <p>
+              <i class="iconfont ic-diamond"></i>
+              <span>今日精选</span>
+              <i class="iconfont ic-right"></i>
+            </p>
+
+            <div class="list" id="featured-list">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content focus-post">
+        <div class="list-wrapper" id="focus-wrapper">
+          <div class="current-post-list" id="focus-list">
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="new-btn">
+      <i class="iconfont ic-new-post"></i>
+    </a>
+  </div>
+  <!-- 引入jQuery 2.0+ -->
+  <script src="../lib/zepto.min.js"></script>
+  <!-- 引入YDUI脚本 -->
+  <script src="../lib/ydui-0.1.3/build/js/ydui.js"></script>
+  <script>
+    const tabContent = document.querySelector('.tab-content')
+    const contentWrapper = document.querySelector('.content-wrapper')
+
+
+    $('body').on('click', '.tab-content span', function (evt) {
+      const currentTabId = this.dataset.tabId
+      tabContent.dataset.currentTab = currentTabId
+      contentWrapper.dataset.currentContent = currentTabId
+    })
+
+    let page = 1,
+      pageSize = 10
+
+    $('#featured-list-wrapper').infiniteScroll({
+      binder: $('#featured-list-wrapper'),
+      pageSize: pageSize,
+      initLoad: true,
+      loadingHtml: '<strong>加载中...</strong>',
+      /* 当然也可以<img src="../img/loading.gif" /> */
+      loadListFn: function () {
+        console.log('123123')
+        var def = $.Deferred();
+
+        // /* 通过自定义的方法获取数据 */
+        // $.ajax({
+        //   url: '/请求数据方法',
+        //   dataType: 'json',
+        //   data: {
+        //     page: page,
+        //     pagesize: pageSize
+        //   },
+        //   success: function (ret) {
+        //     /* 假设ret.list为后端返回的列表数组 */
+
+        //     /* 用你喜欢的方法将获取到的数据拼接成HTML，然后插入；*/
+        //     /* 建议使用模板引擎，示例使用artTemplate；https://github.com/aui/artTemplate */
+        //     var html = ret.list + '将数据拼接成html';
+        //     $('#featured-list').append(html);
+
+        //     /* 获取数据，并插入页面后，调用resole，并传入当前获取的记录列表集合 */
+        //     def.resolve(ret.list);
+
+        //     /* 页码自增1 */
+        //     ++page;
+        //   }
+        // });
+        const list = []
+        for (let i = 0; i < 10; i++) {
+          const d = new Date()
+          list.push({
+            id: d.getTime(),
+            imgSrc: '../images/action.png',
+            avatarSrc: '../images/avatar.jpeg',
+            name: 'aaa' + i,
+            des: 'des-des-des-des-des-des-des-des-des',
+            d: d.getTime()
+          })
+        }
+
+        const getHtml = function (info) {
+          return '<div class="list-item" data-item-id="' + info.id + '">' +
+            '<img src="' + info.imgSrc + '" alt="ax">' +
+            '<p><img src="' + info.avatarSrc + '" alt="xxx"> ' + info.name + '</p>' +
+            '<p class="des">' + info.des + '</p>' +
+            '</div>'
+        }
+
+        setTimeout(function () {
+          let html = ''
+          list.forEach(function (info) {
+            html += getHtml(info)
+          })
+
+          $('#featured-list').append(html)
+          def.resolve(list)
+            ++page
+        }, 800)
+
+        return def.promise();
+      }
+    });
+
+    let currentPage = 1,
+      currentPageSize = 10
+    $('#current-post-wrapper').infiniteScroll({
+      binder: $('#current-post-wrapper'),
+      pageSize: currentPageSize,
+      initLoad: true,
+      loadingHtml: '<strong>加载中...</strong>',
+      /* 当然也可以<img src="../img/loading.gif" /> */
+      loadListFn: function () {
+        console.log('123')
+        var def = $.Deferred();
+
+        /* 通过自定义的方法获取数据 */
+        // $.ajax({
+        //     url: '/请求数据方法',
+        //     dataType: 'json',
+        //     data: { page: page, pagesize: pageSize },
+        //     success: function (ret) {
+        //         /* 假设ret.list为后端返回的列表数组 */
+
+        //         /* 用你喜欢的方法将获取到的数据拼接成HTML，然后插入；*/
+        //         /* 建议使用模板引擎，示例使用artTemplate；https://github.com/aui/artTemplate */
+        //         var html = ret.list + '将数据拼接成html';
+        //         $listWrapper.append(html);
+
+        //         /* 获取数据，并插入页面后，调用resole，并传入当前获取的记录列表集合 */
+        //         def.resolve(ret.list);
+
+        //         /* 页码自增1 */
+        //         ++page;
+        //     }
+        // });
+
+        const list = []
+        for (let i = 0; i < 10; i++) {
+          const d = new Date()
+          list.push({
+            avatar: '../images/avatar.jpeg',
+            name: '吕不韦',
+            level: i,
+            time: d.getHours() + ':' + (d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes()),
+            title: '这是标题',
+            msg: '啦啦啦啦',
+            imgs: [
+              '../images/action.png',
+              '../images/avatar.jpeg',
+              '../images/banner.png',
+              '../images/login-bg.png'
+            ]
+          })
+        }
+
+        const getItemStr = function (data) {
+
+          const getImagesStr = function (imgs) {
+            let str = ''
+            if (imgs.length >= 3) {
+              str = '<div class="first">' +
+                '<img src="' + imgs[0] + '" alt="pic">' +
+                '</div>' +
+                '<div class="more-box">' +
+                '<div><img src="' + imgs[1] + '" alt="pic"></div>' +
+                '<div class="hasMore">' +
+                '<img src="' + imgs[2] + '" alt="pic">' +
+                '<span>共' + imgs.length + '张</span>' +
+                '</div>' +
+                '</div>'
+            } else {
+              str = '<div><img src="' + imgs[0] + '" alt="pic"></div>' +
+                '<div><img src="' + imgs[1] + '" alt="pic"></div>'
+            }
+
+            return str
+          }
+          const active = data.level % 2 === 0 ? "heart" : "heart-active"
+          const imgClass = data.imgs.length >= 3 ? "more" : "imgs"
+          return '<div class="list-item">' +
+            '<div class="info">' +
+            '<img src="' + data.avatar + '" alt="avatar">' +
+            '<div class="user-info">' +
+            '<span class="user-name">' + data.name + '</span>' +
+            '<span class="user-level">Lv' + data.level + '</span>' +
+            '</div>' +
+            '<div class="post-time">' + data.time + '</div>' +
+            '</div>' +
+            '<div class="detail">' +
+            '<p class="title">' + data.title + '</p>' +
+            '<p class="msg">' + data.msg + '</p>' +
+            '</div>' +
+            '<div class="' + imgClass + '">' +
+            getImagesStr(data.imgs) +
+            '</div>' +
+            '<div class="count">' +
+            '<span class="iconfont ic-' + active + '">6</span>' +
+            '<span class="iconfont ic-msg">8</span>' +
+            '</div>' +
+            '</div>'
+        }
+
+        setTimeout(function () {
+          let str = ''
+          list.forEach(element => {
+            str += getItemStr(element)
+          });
+
+          $('#current-post-list').append(str);
+
+          def.resolve(list);
+
+          ++page;
+        }, 800)
+
+        return def.promise();
+      }
+    });
+    let focusPage = 1,
+      focusPageSize = 10
+    $('#focus-wrapper').infiniteScroll({
+      binder: $('#focus-wrapper'),
+      pageSize: currentPageSize,
+      initLoad: true,
+      loadingHtml: '<strong>加载中...</strong>',
+      /* 当然也可以<img src="../img/loading.gif" /> */
+      loadListFn: function () {
+        console.log('123')
+        var def = $.Deferred();
+
+        /* 通过自定义的方法获取数据 */
+        // $.ajax({
+        //     url: '/请求数据方法',
+        //     dataType: 'json',
+        //     data: { page: page, pagesize: pageSize },
+        //     success: function (ret) {
+        //         /* 假设ret.list为后端返回的列表数组 */
+
+        //         /* 用你喜欢的方法将获取到的数据拼接成HTML，然后插入；*/
+        //         /* 建议使用模板引擎，示例使用artTemplate；https://github.com/aui/artTemplate */
+        //         var html = ret.list + '将数据拼接成html';
+        //         $listWrapper.append(html);
+
+        //         /* 获取数据，并插入页面后，调用resole，并传入当前获取的记录列表集合 */
+        //         def.resolve(ret.list);
+
+        //         /* 页码自增1 */
+        //         ++page;
+        //     }
+        // });
+
+        const list = []
+        for (let i = 0; i < 10; i++) {
+          const d = new Date()
+          list.push({
+            avatar: '../images/avatar.jpeg',
+            name: '吕不韦',
+            level: i,
+            time: d.getHours() + ':' + (d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes()),
+            title: '这是标题-关注的',
+            msg: '啦啦啦啦',
+            imgs: [
+              '../images/action.png',
+              '../images/avatar.jpeg',
+              '../images/banner.png',
+              '../images/login-bg.png'
+            ]
+          })
+        }
+
+        const getItemStr = function (data) {
+
+          const getImagesStr = function (imgs) {
+            let str = ''
+            if (imgs.length >= 3) {
+              str = '<div class="first">' +
+                '<img src="' + imgs[0] + '" alt="pic">' +
+                '</div>' +
+                '<div class="more-box">' +
+                '<div><img src="' + imgs[1] + '" alt="pic"></div>' +
+                '<div class="hasMore">' +
+                '<img src="' + imgs[2] + '" alt="pic">' +
+                '<span>共' + imgs.length + '张</span>' +
+                '</div>' +
+                '</div>'
+            } else {
+              str = '<div><img src="' + imgs[0] + '" alt="pic"></div>' +
+                '<div><img src="' + imgs[1] + '" alt="pic"></div>'
+            }
+
+            return str
+          }
+          const active = data.level % 2 === 0 ? "heart" : "heart-active"
+          const imgClass = data.imgs.length >= 3 ? "more" : "imgs"
+          return '<div class="list-item">' +
+            '<div class="info">' +
+            '<img src="' + data.avatar + '" alt="avatar">' +
+            '<div class="user-info">' +
+            '<span class="user-name">' + data.name + '</span>' +
+            '<span class="user-level">Lv' + data.level + '</span>' +
+            '</div>' +
+            '<div class="post-time">' + data.time + '</div>' +
+            '</div>' +
+            '<div class="detail">' +
+            '<p class="title">' + data.title + '</p>' +
+            '<p class="msg">' + data.msg + '</p>' +
+            '</div>' +
+            '<div class="' + imgClass + '">' +
+            getImagesStr(data.imgs) +
+            '</div>' +
+            '<div class="count">' +
+            '<span class="iconfont ic-' + active + '">6</span>' +
+            '<span class="iconfont ic-msg">8</span>' +
+            '</div>' +
+            '</div>'
+        }
+
+        setTimeout(function () {
+          let str = ''
+          list.forEach(element => {
+            str += getItemStr(element)
+          });
+
+          $('#focus-list').append(str);
+
+          def.resolve(list);
+
+          ++page;
+        }, 800)
+
+        return def.promise();
+      }
+    });
+  </script>
+</body>
+
+</html>
