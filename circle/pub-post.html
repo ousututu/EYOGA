@@ -19,85 +19,69 @@
 </head>
 
 <body>
-  <div class="page page-public-post">
+  <div class="page page-publish-post">
     <header class="m-navbar">
       <a href="#" class="navbar-item">
-        <i class="icon-closed"></i>
+        <i class="iconfont ic-close"></i>
       </a>
       <div class="navbar-center">
         <span class="navbar-title">发布帖子</span>
       </div>
     </header>
     <div class="content">
-      <div class="post-info">
-        <div class="auther-info">
-          <img src="../images/avatar.jpeg" alt="avatar">
-          <p class="user-name">吕小猪
-            <span class="level">lv 0</span>
-          </p>
-          <p class="date">03-28</p>
+      <div class="post-detail">
+        <div class="detail">
+          <label class="input-title" for="post-title">
+            <input type="text" id="post-title" placeholder="标题（选填）">
+          </label>
+          <label class="textarea-info" for="post-info">
+            <textarea
+              rows="5"
+              id="post-info"
+              placeholder="你可以和大家分享你练习瑜伽的心路历程，晒晒自己练习的体式，也可以向大家提问~但请勿发布无关内容，否则可能会被删帖或关小黑屋哦~"></textarea>
+          </label>
         </div>
-        <div class="post-content">
-          <p class="post-title">夏天露腿季到来</p>
-          <p class="post-article">夏天露腿季到来夏天露腿季到来夏天露腿季到来夏天露腿季到来夏天露腿季到来夏天露腿季到来夏天露腿季到来夏天露腿季到来夏天露腿季到来夏天露腿季到来夏天露腿季到来夏天露腿季到来夏天露腿季到来夏天露腿季到来夏天露腿季到来</p>
-          <img src="../images/action.png" alt="img">
+        <div class="topic">
+          <span>#随心所瑜</span>
+          <span>#我爱健康餐</span>
+          <span>#更多话题</span>
         </div>
       </div>
-      <div class="post-comment">
-        <div class="comment-item">
-          <div class="user-info">
-            <img src="../images/avatar.jpeg" alt="avatar">
-            <p class="user-name">吕小猪
-              <span class="level">lv 0</span>
-              <span class="floor">10楼</span>
-            </p>
-            <p class="date">03-28</p>
-          </div>
-          <p class="comment-detail">内容非常有用</p>
+      <div class="post-imgs">
+        <div class="item add-btn">
+          <i class="iconfont ic-add-img"></i>
         </div>
-        <div class="comment-item">
-          <div class="user-info">
-            <img src="../images/avatar.jpeg" alt="avatar">
-            <p class="user-name">吕小猪
-              <span class="level">lv 0</span>
-              <span class="floor">10楼</span>
-            </p>
-            <p class="date">03-28</p>
-          </div>
-          <p class="comment-detail">内容非常有用</p>
+        <div class="item">
+          <img src="../images/avatar.jpeg" alt="img">
         </div>
-        <div class="comment-item">
-          <div class="user-info">
-            <img src="../images/avatar.jpeg" alt="avatar">
-            <p class="user-name">吕小猪
-              <span class="level">lv 0</span>
-              <span class="floor">10楼</span>
-            </p>
-            <p class="date">03-28</p>
-          </div>
-          <p class="comment-detail">内容非常有用</p>
+        <div class="item">
+          <img src="../images/avatar.jpeg" alt="img">
         </div>
-        <div class="comment-item">
-          <div class="user-info">
-            <img src="../images/avatar.jpeg" alt="avatar">
-            <p class="user-name">吕小猪
-              <span class="level">lv 0</span>
-              <span class="floor">10楼</span>
-            </p>
-            <p class="date">03-28</p>
-          </div>
-          <p class="comment-detail">内容非常有用</p>
+        <div class="item">
+          <img src="../images/avatar.jpeg" alt="img">
+        </div>
+        <div class="item">
+          <img src="../images/avatar.jpeg" alt="img">
+        </div>
+        <div class="item">
+          <img src="../images/avatar.jpeg" alt="img">
+        </div>
+        <div class="item">
+          <img src="../images/avatar.jpeg" alt="img">
+        </div>
+        <div class="item">
+          <img src="../images/avatar.jpeg" alt="img">
+        </div>
+        <div class="item">
+          <img src="../images/avatar.jpeg" alt="img">
+        </div>
+        <div class="item">
+          <img src="../images/avatar.jpeg" alt="img">
         </div>
       </div>
     </div>
-    <div class="footer">
-      <label class="comment-box" for="comment-input">
-        <input type="text" id="comment-input" placeholder="发表评论">
-      </label>
-      <span class="iconfont ic-heart" style="display: none;">2</span>
-      <span class="iconfont ic-star" style="display: none;">4</span>
-      <i class="iconfont ic-emoj"></i>
-      <div class="send-btn" id="send-btn">发送</div>
+    <div class="footer disabled">
+      发布
     </div>
   </div>
 
